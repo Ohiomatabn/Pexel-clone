@@ -243,6 +243,7 @@ span{
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 20px;
     column-gap: 20px;
+    background-color: #fff;
 }
 
 .container-photos img{
@@ -269,6 +270,12 @@ span{
     right: 10px;
     border-radius: 20px;
     display: none;
+}
+
+.grid .download a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
 }
 
 .grid:hover .download{
