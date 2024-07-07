@@ -405,13 +405,13 @@ footer h4{
     font-weight: 300;
 }
 @media(max-width:1227px){
-    .container-photos{
+    .container-photos, footer .container{
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media(max-width:700px){
-    .container-photos{
+    .container-photos, footer .container{
         grid-template-columns: 1fr;
     }
 
@@ -437,6 +437,19 @@ footer h4{
     }
 
     .section-1 .container{
+        flex-direction: column;
+    }
+
+    footer .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .footer{
+        justify-content: space-between;
+        align-items: center;
         flex-direction: column;
     }
 }
