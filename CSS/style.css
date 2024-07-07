@@ -301,6 +301,109 @@ section.img{
     display: none;
 }
 
+footer{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer h4{
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.free-photos{
+    padding-bottom: 20px;
+}
+
+.apps p{
+    font-size: 16px;
+    font-weight: 100;
+    color: #969090;
+}
+
+.apps span{
+    font-size: 18px;
+    color: var(--black);
+}
+
+.apps a{
+    color: var(--black);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid;
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0px 40px 0px;
+}
+
+.social i{
+    padding-right: 20px;
+}
+
+.pexel h4, .company h4{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.pex, .stocks h4{
+    padding-bottom: 20px;
+    font-weight: 300;
+}
+
+.black a{
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+    border: 1px solid gray;
+    margin-bottom: 15px;
+    padding: 10px 6px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: .5s;
+}
+
+.black a:hover{
+    background-color: var(--white);
+    color: var(--black);
+    border: none;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 10px 0 10px;
+}
+
+.term{
+    display: flex;
+    justify-content: space-between;
+}
+
+.term p{
+    padding-left: 20px;
+}
+
+.footer select{
+    background-color: gray;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footer select option{
+    background-color: gray;
+    color: var(--white);
+}
+
+.footer p{
+    font-size: 18px;
+    font-weight: 300;
+}
 @media(max-width:1227px){
     .container-photos{
         grid-template-columns: 1fr 1fr;
