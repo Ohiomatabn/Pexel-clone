@@ -23,7 +23,7 @@ p{
 }
 
 .container{
-    width: 95%;
+    width:  80%;
     margin: auto;
 }
 
@@ -283,7 +283,7 @@ span{
 }
 
 section.img{
-    width: 95%;
+    width:  80%;
     margin: 30px auto;
 }
 
@@ -377,7 +377,7 @@ footer h4{
 .footer{
     display: flex;
     justify-content: space-between;
-    padding: 100px 10px 0 10px;
+    padding: 100px 10px 40px 10px;
 }
 
 .term{
@@ -415,7 +415,7 @@ footer h4{
         grid-template-columns: 1fr;
     }
 
-    .explore{
+    .explore, .prof{
         display: none;
     }
 
