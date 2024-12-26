@@ -5,13 +5,19 @@ let imageHTML ='';
 images.forEach((image) =>{
   imageHTML += `
     <div class="relative">
-      <img src="${image.src}" alt="IMG" loading="lazy">
-      <div class="download">
-        <a href= "${image.src}" download="download">Download</a>
-      </div>
-      <div class="likes">
-        <span>${image.likes}</span>
-      </div>
+        <div class = "overlay"></div>
+        <img src="${image.src}" alt="IMG" loading="lazy">
+        <div class="download">
+          <a href= "${image.src}" download="download"><img src="IMG/download.svg" class="download-icon">Download</a>
+        </div>
+        <div class="pexel-profile">
+          <img src="IMG/ohiomata2.jpg" class="profile-img">
+          <p>Pixabay</p>
+        </div>
+        <div class="absolute icon-flex">
+          <p class="img-container margin"><img src="IMG/copy.svg"></p>
+          <p class="img-container"><img src="IMG/heart.svg"></p>
+        </div>
     </div> 
   `
 });

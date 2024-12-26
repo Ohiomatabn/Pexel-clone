@@ -228,6 +228,15 @@ h2.free{
     padding: 10px 0 30px 0;
 }
 
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
 .grid, .grid-template{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -259,24 +268,65 @@ h2.free{
     cursor: pointer;
 }
 
+.download-icon{
+    width: 15px !important;
+    height: 15px !important;
+    display: inline-block;
+    margin-right: 10px;
+}
+
 .download a{
     color: var(--white);
 }
 
-.likes{
+.pexel-profile{
     position: absolute;
     bottom: 5%;
     left: 5%;
     color: var(--white);
     text-shadow: 5px 5px 5px black;
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.relative .likes, .relative .download{
+.profile-img{
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.absolute{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.img-container{
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.absolute img{
+    width: 15px;
+    height: 15px;
+}
+
+.margin{
+    margin-right: 10px;
+}
+
+.icon-flex{
+    display: flex;
+}
+
+.relative .pexel-profile, .relative .absolute, .relative .download{
     opacity: 0;
 }
 
-.relative:hover .likes, .relative:hover .download{
+.relative:hover .pexel-profile, .relative:hover .absolute, .relative:hover .download{
     opacity: 1;
 }
 
