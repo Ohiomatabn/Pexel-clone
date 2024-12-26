@@ -16,3 +16,11 @@ images.forEach((image) =>{
   `
 });
 document.getElementById('js-images').innerHTML = imageHTML;
+
+document.querySelector('.js-bars').addEventListener('click', ()=>{
+  document.querySelector('.js-explore').setAttribute('style', 'margin: 0;');
+});
+
+document.querySelector('.js-times').addEventListener('click', () =>{
+  document.querySelector('.js-explore').setAttribute('style', 'margin: -200px');
+});
