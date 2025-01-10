@@ -1,14 +1,17 @@
 import {images} from './images.js'
+import './download.js';
+import { download } from './download.js';
 
 let imageHTML ='';
+
 
 images.forEach((image) =>{
   imageHTML += `
     <div class="relative">
         <div class = "overlay"></div>
-        <img src="${image.src}" alt="IMG" loading="lazy">
+        <img src="${image.src}" alt="IMG">
         <div class="download">
-          <button class="js-download-button"><img src="IMG/download.svg" class="download-icon">Download</button>
+          <button class="js-download-button" id="button1" data-image-id =${image.id}><img src="IMG/download.svg" class="download-icon">Download</button>
         </div>
         <div class="pexel-profile">
           <img src="IMG/ohiomata2.jpg" class="profile-img">
@@ -20,6 +23,7 @@ images.forEach((image) =>{
         </div>
     </div> 
   `
+  console.log(image.id);
 });
 document.getElementById('js-images').innerHTML = imageHTML;
 
@@ -31,10 +35,16 @@ document.querySelector('.js-times').addEventListener('click', () =>{
   document.querySelector('.js-explore').setAttribute('style', 'margin: -200px');
 });
 
-document.querySelector('.js-download-button').addEventListener('click', () =>{
-  document.querySelector('.js-download-cover').setAttribute('style', 'display: block;');
-});
-
-document.querySelector('.js-hide').addEventListener('click', () =>{
-  document.querySelector('.js-download-cover').setAttribute('style', 'display: none;');
+document.querySelectorAll('.js-download-button').forEach((button) =>{
+  button.addEventListener('click', () =>{
+    const imageId = button.dataset.imageId;
+    let matchingImage;
+    
+    images.forEach(image =>{
+      if(imageId === image.id){
+        matchingImage = image;
+        download(matchingImage);
+      }
+    })
+  });
 });
