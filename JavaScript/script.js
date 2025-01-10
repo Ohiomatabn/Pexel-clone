@@ -5,7 +5,7 @@ import { download } from './download.js';
 let imageHTML ='';
 
 
-images.forEach((image) =>{
+window.onload = images.forEach((image) =>{
   imageHTML += `
     <div class="relative">
         <div class = "overlay"></div>
@@ -25,7 +25,8 @@ images.forEach((image) =>{
   `
   console.log(image.id);
 });
-document.getElementById('js-images').innerHTML = imageHTML;
+
+window.onload = document.getElementById('js-images').innerHTML = imageHTML;
 
 document.querySelector('.js-bars').addEventListener('click', ()=>{
   document.querySelector('.js-explore').setAttribute('style', 'margin: 0;');
